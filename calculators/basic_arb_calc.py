@@ -10,7 +10,7 @@ def calculate_intercepts(slopes):
     return intercepts, sum_intercepts
 
 
-# Example slopes: 1.8, 21, 2.3
+# Example odds: 4/5, 20/1, 13/10
 slopes = [1.8, 21, 2.3]
 intercepts, sum_intercepts = calculate_intercepts(slopes)
 

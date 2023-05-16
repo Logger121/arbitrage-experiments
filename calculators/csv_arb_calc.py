@@ -15,9 +15,9 @@ def calculate_intercepts(slopes):
 
 
 # Read CSV file
-filename = 'formatted_odds.csv'
+filepath = 'docs/formatted_odds.csv'
 
-with open(filename, 'r') as csvfile:
+with open(filepath, 'r') as csvfile:
     reader = csv.reader(csvfile)
     next(reader)  # Skip header row
 
@@ -40,14 +40,14 @@ with open(filename, 'r') as csvfile:
             stake = round(fraction, 2)
             if i == 0:
                 payout = round((stake * win), 2)
-                if payout > multiplier:
-                    print(f"Fighters: {fighter1} vs {fighter2}")
-                    print(f"Payout: £{payout}")
-                    print(f"Win: {stake}")
+                #if payout > multiplier:
+                print(f"Fighters: {fighter1} vs {fighter2}")
+                print(f"Payout: £{payout}")
+                print(f"Win: {stake}")
             elif i == 1:
-                if payout > multiplier:
-                    print(f"Draw: {stake}")
+                #if payout > multiplier:
+                print(f"Draw: {stake}")
             else:
-                if payout > multiplier:
-                    print(f"Loss: {stake}")
-                    print()
+                #if payout > multiplier:
+                print(f"Loss: {stake}")
+                print()
