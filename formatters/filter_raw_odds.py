@@ -1,4 +1,4 @@
-with open('raw_odds.txt', 'r') as raw_file, open('filtered_odds.txt', 'w') as filtered_file:
+with open('docs/raw_odds.txt', 'r') as raw_file, open('docs/filtered_odds.txt', 'w') as filtered_file:
     for line in raw_file:
         line = line.strip()  # Remove leading/trailing whitespace
         

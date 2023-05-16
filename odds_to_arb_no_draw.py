@@ -23,7 +23,7 @@ length = 10
 combinations = list(itertools.product(characters, repeat=length))
 
 filtered_lines = []
-with open('raw_odds.txt', 'r') as raw_file:
+with open('docs/raw_odds.txt', 'r') as raw_file:
     for line in raw_file:
         line = line.strip()  # Remove leading/trailing whitespace
 
@@ -38,7 +38,7 @@ with open('raw_odds.txt', 'r') as raw_file:
                 filtered_lines.append(line)
 
 # Write filtered odds to CSV
-with open('formatted_odds.csv', 'w', newline='') as output_csv:
+with open('docs/formatted_odds.csv', 'w', newline='') as output_csv:
     writer = csv.writer(output_csv)
     writer.writerow(['Fighter1', 'Fighter2', 'Win', 'Loss'])  # Write header row
     
@@ -63,7 +63,7 @@ print()
 arbs = 0
 
 # Read CSV file
-filename = 'formatted_odds.csv'
+filename = 'docs/formatted_odds.csv'
 
 with open(filename, 'r') as csvfile:
     reader = csv.reader(csvfile)

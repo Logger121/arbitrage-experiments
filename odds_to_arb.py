@@ -18,7 +18,7 @@ def calculate_intercepts(slopes):
     return intercepts, sum_intercepts
 
 # Check if WDL combinations file exists
-wdl_file = 'wdl_combinations.txt'
+wdl_file = 'docs/wdl_combinations.txt'
 if not os.path.isfile(wdl_file):
     # Generate and store WDL combinations in a text file
     characters = ['w', 'l', 'd']
@@ -36,7 +36,7 @@ with open(wdl_file, 'r') as wdl_input:
 
 # Filtering the odds
 filtered_lines = []
-with open('raw_odds.txt', 'r') as raw_file:
+with open('docs/raw_odds.txt', 'r') as raw_file:
     for line in raw_file:
         line = line.strip()  # Remove leading/trailing whitespace
 
@@ -51,7 +51,7 @@ with open('raw_odds.txt', 'r') as raw_file:
                 filtered_lines.append(line)
 
 # Write filtered odds to CSV
-with open('formatted_odds.csv', 'w', newline='') as output_csv:
+with open('docs/formatted_odds.csv', 'w', newline='') as output_csv:
     writer = csv.writer(output_csv)
     writer.writerow(['Fighter1', 'Fighter2', 'Win', 'Draw', 'Loss'])  # Write header row
     
@@ -77,7 +77,7 @@ print()
 arbs = 0
 
 # Read CSV file
-filename = 'formatted_odds.csv'
+filename = 'docs/formatted_odds.csv'
 
 with open(filename, 'r') as csvfile:
     reader = csv.reader(csvfile)

@@ -6,7 +6,7 @@ def convert_odds(odds):
 
 # Script 1: Filtering the odds
 filtered_lines = []
-with open('raw_odds.txt', 'r') as raw_file:
+with open('docs/raw_odds.txt', 'r') as raw_file:
     for line in raw_file:
         line = line.strip()  # Remove leading/trailing whitespace
 
@@ -16,7 +16,7 @@ with open('raw_odds.txt', 'r') as raw_file:
             filtered_lines.append(line)
 
 # Script 2: Converting to CSV with decimal odds
-with open('formatted_odds.csv', 'w', newline='') as output_csv:
+with open('docs/formatted_odds.csv', 'w', newline='') as output_csv:
     writer = csv.writer(output_csv)
     writer.writerow(['Fighter1', 'Fighter2', 'Win', 'Draw', 'Loss'])  # Write header row
     

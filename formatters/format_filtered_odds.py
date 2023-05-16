@@ -1,6 +1,6 @@
 import csv
 
-with open('filtered_odds.txt', 'r') as input_file, open('formatted_odds.csv', 'w', newline='') as output_csv:
+with open('docs/filtered_odds.txt', 'r') as input_file, open('docs/formatted_odds.csv', 'w', newline='') as output_csv:
     writer = csv.writer(output_csv)
     writer.writerow(['Fighter1', 'Fighter2', 'Win', 'Draw', 'Loss'])  # Write header row
     
